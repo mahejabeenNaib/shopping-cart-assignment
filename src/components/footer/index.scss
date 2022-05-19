@@ -1,0 +1,10 @@
+@import '../../Theme.scss';
+
+footer {
+    background-color: $primary_bg_color;
+    .footer-conatiner{
+        font-size: 12px;
+        font-weight: 600;
+        padding: 5px;
+    }
+}

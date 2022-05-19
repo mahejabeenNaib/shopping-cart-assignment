@@ -1,0 +1,31 @@
+@import '../../../../Theme.scss';
+
+
+.category-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    background-color: $primary_bg_color;
+    height: 100%;
+    li {
+        border-bottom: 1px solid #ccc;
+        font-size: 14px;
+        padding: 5px;
+        cursor: pointer;
+    }
+    .category-active{
+        color: $primary_color;
+    }
+}
+.m-category-list{
+    .dropdown {
+        width: 100%;
+        button {
+            width: 100%;
+            background-color: $primary_color !important;
+        }
+    }
+    .dropdown-menu.show{
+        width: 100%;
+    }
+}

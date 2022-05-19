@@ -1,0 +1,38 @@
+@import "~bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,600,700");
+@import './Theme.scss';
+
+
+body {
+  font-family: Dosis , sans-serif;
+}
+
+.btn-primary {
+  background-color: $primary_color;
+  color: #fff;
+  border: none;
+  &:hover {
+    background-color: #fff;
+    color: $primary_color;
+  }
+}
+.flex {
+  display: flex;
+}
+.form-wrapper{
+  justify-content: center;
+  display: flex;
+}
+.form-text-section{
+  flex-direction: column;
+  align-items: center;
+  display: inline-block;
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+   p{
+    text-align: left;
+    font-weight: 600;
+   }
+}

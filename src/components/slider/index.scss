@@ -1,0 +1,11 @@
+@import '../../Theme.scss';
+
+.carousel-indicators [data-bs-target]{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color:#8d8787;
+}
+.carousel {
+    box-shadow: 0 25px 31px -20px rgb(0 0 0 / 22%);
+}
