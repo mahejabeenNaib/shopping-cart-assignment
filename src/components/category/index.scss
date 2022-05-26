@@ -18,11 +18,11 @@
     align-items: stretch;
     display: flex;
     p {
-      font-size: x-small;
+      font-size: 10px;
       text-align: center;
     }
     span {
-      font-size: x-small;
+      font-size: 10px;
       text-align: center;
     }
     a {
@@ -54,11 +54,10 @@
   }
   .image-container {
     img {
+      height: auto;
       width: 100%;
+      min-width: 130px;
     }
     width: 30%;
   }
-}
-.swipe .banner-component {
-  flex-direction: row;
 }

@@ -1,27 +1,23 @@
 import React, { useContext } from "react";
-import { Col, Row } from "react-bootstrap";
 import CartContext from "../../../../context/cartContext/cart-context";
 import { Product } from "../../../../services/commonServices";
 import "./index.scss";
 
 const ProductList = ({ list }: any) => {
   const {
-    CartState: { cartItems },
     updateCart,
   } = useContext(CartContext);
 
-  // const isItemInCart = Boolean(cartItems.find((item) => item.id === get(product, 'id')));
   const handleClick = (product: Product) => {
     updateCart(product);
-    // isItemInCart ? history.push(CART) : updateCart(product);
   };
 
   return (
     <div>
       <ul className="product-list">
-        {list.map((product: any) => (
-          <li className="product-cards" id={product.category}>
-            <h2 className="product-name truncate">{product.name}</h2>
+        {list.map((product: Product) => (
+          <li className="product-cards" id={product.category} key={product.id}>
+            <h1 className="product-name truncate">{product.name}</h1>
             <div  className="product-wrap">
               <img
                 src={product.imageURL}
@@ -36,7 +32,6 @@ const ProductList = ({ list }: any) => {
                     onClick={() => handleClick(product)}
                     className="btn-cta btn-primary"
                   >
-                    {/* {true ? 'Go To Cart' : 'Add To Cart'} */}
                     Buy Now
                   </button>
                 </div>

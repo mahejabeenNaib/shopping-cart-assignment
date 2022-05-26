@@ -7,11 +7,10 @@ const Slider = ({list} : any) => {
   return (
     <div>
       <Carousel>
-
         {list && list.length > 0 && list.map((item: Banner) => (
-        <Carousel.Item>
+        <Carousel.Item key={item.id}>
           <img
-            className="d-block w-100"
+            // className="d-block"
             src={item.bannerImageUrl}
             alt={item.bannerImageAlt}
           />        

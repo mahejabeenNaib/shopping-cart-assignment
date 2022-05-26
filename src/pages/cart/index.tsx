@@ -41,12 +41,12 @@ const Cart = ({showClose, handleClose}: any) => {
     return (
         <div className="cart-container">
             <div className="header-container">
-                <h4 className="heading">
+                <h2 className="heading">
                     My cart
                     <span style={{ fontSize: 'small' }}>{cartCount > 0 ? ` (${cartCount} Item)` : null}</span>
-                </h4>
-               {showClose && <span onClick={handleClose}>
-                    X
+                </h2>
+               {showClose && <span role="button" aria-label='Close' onClick={handleClose}>
+               &times;
                 </span>}
             </div>
 
@@ -60,14 +60,14 @@ const Cart = ({showClose, handleClose}: any) => {
                                     <span className="cart_list-name truncate" style={{ display: 'block' }}>
                                         {item.name}
                                     </span>
-                                    <button className="btn-decrement" onClick={handleCartRemove(item)}>
+                                    <button className="btn-decrement" aria-label='Decrease product count' onClick={handleCartRemove(item)}>
                                         -
                                     </button>
                                     <span className="quantity">{item.qty}</span>
-                                    <button className="btn-increment" onClick={handleCartUpdate(item)}>
+                                    <button className="btn-increment" aria-label='Increase product count' onClick={handleCartUpdate(item)}>
                                         +
                                     </button>
-                                    <span className="into-qty">X</span>
+                                    <span className="into-qty" aria-label='Multiplied by'>X</span>
                                     <span className="cart_list-price">₹ {item.price}</span>
                                     <span className="cart_list-item-total">₹ {item.qty * item.price}</span>
                                 </div>
